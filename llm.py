@@ -8,9 +8,5 @@ llm = ChatOpenAI(
     temperature=0.7,
 )
 
-response = llm.stream("Write a poem about AI")
-# print(response)
-
-for chunk in response:
-    print(chunk.content, end="", flush=True)
-
+response = llm.invoke("Write a poem about AI")
+print(response)
