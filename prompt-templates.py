@@ -22,4 +22,4 @@ prompt = ChatPromptTemplate.from_messages(
 chain = prompt | llm
 
 response = chain.invoke({"input": "happy"})
-print(response)
+print(type(response.content))
